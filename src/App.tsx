@@ -5,16 +5,16 @@ import { Card } from "./components/ui/card";
 import { Badge } from "./components/ui/badge";
 import { Input } from "./components/ui/input";
 import { Textarea } from "./components/ui/textarea";
-import { Progress } from "./components/ui/progress";
 import { ImageWithFallback } from "./components/figma/ImageWithFallback";
-import { 
-  Github, 
-  Linkedin, 
-  Mail, 
-  ExternalLink, 
-  Code2, 
-  Palette, 
-  Smartphone, 
+
+import {
+  Github,
+  Linkedin,
+  Mail,
+  ExternalLink,
+  Code2,
+  Palette,
+  Smartphone,
   Database,
   GitBranch,
   Terminal,
@@ -24,6 +24,11 @@ import {
   Send
 } from "lucide-react";
 import { useState } from "react";
+
+import Walker from './assets/images/portimage.jpeg';
+import EcommerceImage from './assets/images/ecommerce-product-page.png';
+import CommentsImage from './assets/images/intereactive-comments-section-pic.png';
+import RestCountriesImage from './assets/images/rest-countries-project.png';
 
 export default function App() {
   const [formData, setFormData] = useState({
@@ -42,44 +47,39 @@ export default function App() {
 
   const projects = [
     {
-      title: "E-Commerce Dashboard",
-      description: "A modern admin dashboard for managing products, orders, and analytics with real-time updates.",
-      image: "https://images.unsplash.com/photo-1563486299190-d415ab26e837?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb2RpbmclMjBkYXNoYm9hcmR8ZW58MXx8fHwxNzYwNDYyMjc5fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-      technologies: ["React", "TypeScript", "Tailwind CSS", "Chart.js"]
+      title: "Rest Countries API Project",
+      description: "A comprehensive country data application with theme switching and search functionality.",
+      image: RestCountriesImage,
+      technologies: ["React Router", "Tailwind CSS", "React"]
     },
     {
-      title: "Task Management App",
-      description: "Collaborative task management tool with drag-and-drop functionality and team collaboration features.",
-      image: "https://images.unsplash.com/photo-1719400471588-575b23e27bd7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBkZXZlbG9wZXIlMjB3b3Jrc3BhY2V8ZW58MXx8fHwxNzYwNDMzMTEwfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-      technologies: ["React", "Redux", "CSS3", "Node.js"]
+      title: "E-commerce Product Page",
+      description: "A product page for an e-commerce website with a modern and responsive design.",
+      image: EcommerceImage,
+      technologies: ["React", "Tailwind CSS", "TypeScript"]
     },
     {
-      title: "Portfolio Website",
-      description: "Responsive portfolio website with smooth animations and modern UI design principles.",
-      image: "https://images.unsplash.com/photo-1758873271902-a63ecd5b5235?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWIlMjBkZXNpZ24lMjBwcm9qZWN0fGVufDF8fHx8MTc2MDM2MzI1MXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-      technologies: ["HTML5", "CSS3", "JavaScript", "GSAP"]
-    },
-    {
-      title: "Weather App",
-      description: "Clean weather application with location-based forecasts and beautiful weather visualizations.",
-      image: "https://images.unsplash.com/photo-1658953229625-aad99d7603b4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2JpbGUlMjBhcHAlMjBpbnRlcmZhY2V8ZW58MXx8fHwxNzYwNDM4NTg2fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-      technologies: ["React", "API Integration", "Tailwind CSS"]
+      title: "Interactive Comments Section",
+      description: "An interactive comments section where you can add, edit, and delete comments.",
+      image: CommentsImage,
+      technologies: ["React", "Tailwind CSS"]
     }
   ];
 
   const skills = [
-    { name: "HTML/CSS", level: 90, icon: Code2, category: "frontend" },
-    { name: "JavaScript", level: 85, icon: Terminal, category: "frontend" },
-    { name: "React", level: 80, icon: Code2, category: "frontend" },
-    { name: "TypeScript", level: 75, icon: Code2, category: "frontend" },
-    { name: "Tailwind CSS", level: 85, icon: Palette, category: "frontend" },
-    { name: "Git & GitHub", level: 80, icon: GitBranch, category: "tools" },
-    { name: "Responsive Design", level: 90, icon: Smartphone, category: "frontend" },
-    { name: "Problem Solving", level: 85, icon: Target, category: "soft" }
+    { name: "HTML", icon: Code2 },
+    { name: "CSS", icon: Palette },
+    { name: "JavaScript", icon: Terminal },
+    { name: "React", icon: Code2 },
+    { name: "TypeScript", icon: Code2 },
+    { name: "Next.js", icon: Code2 },
+    { name: "Python", icon: Terminal },
+    { name: "Flask", icon: Database },
+    { name: "RTC", icon: MessageSquare }
   ];
 
   const technologies = [
-    "HTML5", "CSS3", "JavaScript", "React", "TypeScript", 
+    "HTML5", "CSS3", "JavaScript", "React", "TypeScript",
     "Tailwind CSS", "Git", "Responsive Design", "REST APIs", "npm"
   ];
 
@@ -121,13 +121,13 @@ export default function App() {
                 Passionate about creating beautiful, user-friendly web experiences with clean code and modern technologies.
               </p>
               <div className="flex flex-wrap gap-4">
-                <Button 
+                <Button
                   onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
                   className="bg-purple-600 hover:bg-purple-700"
                 >
                   View Projects
                 </Button>
-                <Button 
+                <Button
                   variant="outline"
                   onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
                   className="border-purple-600 text-purple-600 hover:bg-purple-50"
@@ -169,7 +169,7 @@ export default function App() {
               <div className="relative">
                 <div className="w-48 h-48 rounded-full overflow-hidden border-4 border-purple-600 shadow-xl">
                   <ImageWithFallback
-                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop"
+                    src={Walker}
                     alt="Profile"
                     className="w-full h-full object-cover"
                   />
@@ -181,23 +181,16 @@ export default function App() {
             </div>
             <div className="md:col-span-2">
               <p className="text-gray-700 mb-4">
-                Hello! I'm Johnson, a passionate junior frontend developer based in Accra. I recently completed 
-                my journey into web development and I'm excited to build my career creating amazing digital experiences. 
-                My journey began when I discovered the power of turning ideas into interactive websites.
-              </p>
-              <p className="text-gray-700 mb-4">
-                I specialize in building responsive, user-friendly web applications using modern technologies. 
-                I'm constantly learning and staying up-to-date with the latest web development trends and best practices. 
-                I believe in writing clean, maintainable code and creating interfaces that users love.
+                I'm a junior frontend developer based in Ghana. I build scalable, modern, and clean websites and web apps.
+                Currently transitioning into a fullstack developer. I love to learn new things.
               </p>
               <p className="text-gray-700 mb-6">
-                When I'm not coding, you can find me exploring new technologies, listening to EDMs, 
-                or solving math problems.
+                When I'm not coding, I watch movies and also learn to Alan Walker songs.
               </p>
               <div className="flex flex-wrap gap-2">
                 {technologies.map((tech) => (
-                  <Badge 
-                    key={tech} 
+                  <Badge
+                    key={tech}
                     variant="secondary"
                     className="bg-white border border-purple-200 text-purple-700 hover:bg-purple-50"
                   >
@@ -209,6 +202,7 @@ export default function App() {
           </div>
         </div>
       </section>
+
 
       {/* Projects Section */}
       <section id="projects" className="py-20 px-4 sm:px-6 lg:px-8">
@@ -240,8 +234,8 @@ export default function App() {
                       </Badge>
                     ))}
                   </div>
-                  <Button 
-                    variant="outline" 
+                  <Button
+                    variant="outline"
                     className="w-full border-purple-600 text-purple-600 hover:bg-purple-50 group"
                   >
                     View Project
@@ -264,22 +258,18 @@ export default function App() {
               A comprehensive overview of my technical skills and expertise across different areas of frontend development.
             </p>
           </div>
-          
-          <div className="grid md:grid-cols-2 gap-8 mb-12">
+
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-12">
             {skills.map((skill) => {
               const Icon = skill.icon;
               return (
-                <div key={skill.name} className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">
-                  <div className="flex items-center justify-between mb-3">
-                    <div className="flex items-center gap-3">
-                      <div className="bg-purple-100 p-2 rounded-lg">
-                        <Icon className="h-5 w-5 text-purple-600" />
-                      </div>
-                      <span className="text-gray-800">{skill.name}</span>
+                <div key={skill.name} className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all hover:-translate-y-1 border border-gray-100">
+                  <div className="flex flex-col items-center gap-4 text-center">
+                    <div className="bg-purple-100 p-3 rounded-full">
+                      <Icon className="h-8 w-8 text-purple-600" />
                     </div>
-                    <span className="text-purple-600">{skill.level}%</span>
+                    <span className="text-gray-800 font-medium text-lg">{skill.name}</span>
                   </div>
-                  <Progress value={skill.level} className="h-2" />
                 </div>
               );
             })}
@@ -324,16 +314,16 @@ export default function App() {
             <h2 className="mb-4">Get In Touch</h2>
             <div className="w-20 h-1 bg-purple-600 mx-auto mb-4"></div>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              I'm currently looking for new opportunities. Whether you have a question or just want to say hi, 
+              I'm currently looking for new opportunities. Whether you have a question or just want to say hi,
               feel free to reach out!
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-2 gap-12">
             <div>
               <h3 className="mb-6">Contact Information</h3>
               <div className="space-y-4">
-                <a 
+                <a
                   href="mailto:johnsonsaka121@gmail.com"
                   className="flex items-center gap-4 p-4 rounded-lg hover:bg-purple-50 transition-colors group"
                 >
@@ -345,7 +335,7 @@ export default function App() {
                     <div className="text-gray-800">johnsonsaka121@gmail.com</div>
                   </div>
                 </a>
-                <a 
+                <a
                   href="https://github.com/JohnsonWalker-cmd"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -359,7 +349,7 @@ export default function App() {
                     <div className="text-gray-800">@JohnsonWalker-cmd</div>
                   </div>
                 </a>
-                <a 
+                <a
                   href="https://www.linkedin.com/in/johnson-saka-968052268/"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -375,7 +365,7 @@ export default function App() {
                 </a>
               </div>
             </div>
-            
+
             <Card className="p-6">
               <h3 className="mb-6">Send a Message</h3>
               <form onSubmit={handleSubmit} className="space-y-4">
@@ -444,23 +434,23 @@ export default function App() {
             <div>
               <h4 className="mb-4">Connect</h4>
               <div className="flex gap-4">
-                <a 
-                  href="https://github.com/JohnsonWalker-cmd" 
-                  target="_blank" 
+                <a
+                  href="https://github.com/JohnsonWalker-cmd"
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="bg-gray-800 p-3 rounded-lg hover:bg-purple-600 transition-colors"
                 >
                   <Github className="h-5 w-5" />
                 </a>
-                <a 
-                  href="https://www.linkedin.com/in/johnson-saka-968052268/" 
-                  target="_blank" 
+                <a
+                  href="https://www.linkedin.com/in/johnson-saka-968052268/"
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="bg-gray-800 p-3 rounded-lg hover:bg-purple-600 transition-colors"
                 >
                   <Linkedin className="h-5 w-5" />
                 </a>
-                <a 
+                <a
                   href="mailto:johnsonsaka121@gmail.com"
                   className="bg-gray-800 p-3 rounded-lg hover:bg-purple-600 transition-colors"
                 >
