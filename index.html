@@ -1,15 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
 
-  <!DOCTYPE html>
-  <html lang="en">
-    <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Johnson Saka</title>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Johnson Saka - Creative Developer & Designer">
+    <title>Johnson Saka | Creative Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
 
-    <body>
-      <div id="root"></div>
-      <script type="module" src="/src/main.tsx"></script>
-    </body>
-  </html>
-  
+<body>
+    <div class="cursor-dot" data-cursor-dot></div>
+    <div class="cursor-outline" data-cursor-outline></div>
+
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">JS<span class="dot">.</span></a>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-list">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#resume" class="nav-link">Resume</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <span class="subtitle">Hello, I'm</span>
+                    <h1 class="title">Johnson Saka</h1>
+                    <h2 class="role">Creative Developer <span class="highlight">&</span> Designer</h2>
+                    <p class="description">I build accessible, pixel-perfect, and performant web experiences that push
+                        boundaries.</p>
+                    <div class="cta-group">
+                        <a href="#projects" class="btn btn-primary">View Work</a>
+                        <a href="#contact" class="btn btn-secondary">Contact Me</a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="blob"></div>
+                    <div class="blob blob-2"></div>
+                    <div class="glass-card">
+                        <i class="fa-solid fa-code icon"></i>
+                        <span>Clean Code</span>
+                    </div>
+                    <div class="glass-card card-2">
+                        <i class="fa-solid fa-wand-magic-sparkles icon"></i>
+                        <span>Modern Design</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="container">
+                <h2 class="section-title">About Me</h2>
+                <div class="about-content">
+                    <div class="about-image">
+                        <div class="image-placeholder"></div>
+                    </div>
+                    <div class="about-text">
+                        <p>I'm a passionate developer with a keen eye for design. I specialize in building modern web
+                            applications that are not only functional but also visually stunning. With a background in
+                            both design and engineering, I bridge the gap between aesthetics and technical feasibility.
+                        </p>
+                        <div class="stats">
+                            <div class="stat-item">
+                                <span class="stat-number">5+</span>
+                                <span class="stat-label">Years Experience</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">50+</span>
+                                <span class="stat-label">Projects Completed</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="projects">
+            <div class="container">
+                <h2 class="section-title">Featured Projects</h2>
+                <div class="project-grid">
+                    <!-- Project Card 1 -->
+                    <article class="project-card">
+                        <div class="project-image">
+                            <div class="overlay"></div>
+                        </div>
+                        <div class="project-info">
+                            <h3>E-Commerce Platform</h3>
+                            <p>A fully functional e-commerce solution with real-time inventory and secure payments.</p>
+                            <div class="tags">
+                                <span>React</span>
+                                <span>Node.js</span>
+                                <span>Stripe</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="icon-link"><i class="fa-brands fa-github"></i></a>
+                                <a href="#" class="icon-link"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- Project Card 2 -->
+                    <article class="project-card">
+                        <div class="project-image">
+                            <div class="overlay"></div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Task Management App</h3>
+                            <p>Productivity tool designed to help teams collaborate efficiently.</p>
+                            <div class="tags">
+                                <span>Vue.js</span>
+                                <span>Firebase</span>
+                                <span>Tailwind</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="icon-link"><i class="fa-brands fa-github"></i></a>
+                                <a href="#" class="icon-link"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- Project Card 3 -->
+                    <article class="project-card">
+                        <div class="project-image">
+                            <div class="overlay"></div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Portfolio V1</h3>
+                            <p>My previous portfolio website showcasing my early work.</p>
+                            <div class="tags">
+                                <span>HTML</span>
+                                <span>SCSS</span>
+                                <span>JS</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="icon-link"><i class="fa-brands fa-github"></i></a>
+                                <a href="#" class="icon-link"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="skills">
+            <div class="container">
+                <h2 class="section-title">Skills & Technologies</h2>
+                <div class="skills-wrapper">
+                    <div class="skill-category">
+                        <h3>Frontend</h3>
+                        <div class="skill-list">
+                            <div class="skill-pill">HTML5</div>
+                            <div class="skill-pill">CSS3</div>
+                            <div class="skill-pill">JavaScript (ES6+)</div>
+                            <div class="skill-pill">React</div>
+                            <div class="skill-pill">TypeScript</div>
+                            <div class="skill-pill">Tailwind CSS</div>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Backend & Tools</h3>
+                        <div class="skill-list">
+                            <div class="skill-pill">Node.js</div>
+                            <div class="skill-pill">Python</div>
+                            <div class="skill-pill">Git</div>
+                            <div class="skill-pill">Figma</div>
+                            <div class="skill-pill">Docker</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="resume" class="resume">
+            <div class="container">
+                <h2 class="section-title">Resume</h2>
+                <div class="resume-content" style="text-align: center;">
+                    <p style="color: var(--text-secondary); margin-bottom: 2rem; font-size: 1.1rem;">
+                        Interested in learning more about my experience? Download my resume below.
+                    </p>
+                    <a href="resume.pdf" download class="btn btn-primary">
+                        <i class="fa-solid fa-download" style="margin-right: 0.5rem;"></i> Download Resume
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="contact-wrapper">
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <input type="text" id="name" required placeholder=" ">
+                            <label for="name">Name</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" required placeholder=" ">
+                            <label for="email">Email</label>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" required placeholder=" "></textarea>
+                            <label for="message">Message</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                    <div class="contact-info">
+                        <p>Feel free to reach out for collaborations or just a friendly hello.</p>
+                        <a href="mailto:johnsonsaka121@gmail.com" class="contact-link">johnsonsaka121@gmail.com</a>
+                        <div class="social-links">
+                            <a href="https://x.com/walkerthecutev" target="_blank"><i
+                                    class="fa-brands fa-twitter"></i></a>
+                            <a href="https://www.linkedin.com/in/johnson-saka/" target="_blank"><i
+                                    class="fa-brands fa-linkedin"></i></a>
+                            <a href="https://github.com/JohnsonWalker-cmd" target="_blank"><i
+                                    class="fa-brands fa-github"></i></a>
+                            <a href="https://www.instagram.com/saka.johnson/" target="_blank"><i
+                                    class="fa-brands fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Johnson Saka. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
